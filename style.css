@@ -23,24 +23,24 @@ body::before {
     background-position: center center;
     opacity: 0.4;
     z-index: -1;
-    animation: zoomGlowEffect 20s ease-in-out infinite;
+    animation: zoomGlowEffect 0.8s ease-in-out infinite;
 }
 
 @keyframes zoomGlowEffect {
     0% {
-        background-size: 150%;
-        filter: brightness(1) blur(0px); /* Normal brightness and no blur */
-        box-shadow: 0 0 20px rgba(255, 77, 77, 0.8); /* Glowing effect with red color */
+        background-size: 200%;
+        filter: brightness(1) blur(0px); 
+        box-shadow: 0 0 20px rgba(173, 158, 158, 0.458); 
     }
     50% {
-        background-size: 100%; /* Zoom out to normal size */
-        filter: brightness(1.5) blur(5px); /* Increase brightness and add blur */
-        box-shadow: 0 0 40px rgba(76, 175, 80, 0.8); /* Glowing effect with green color */
+        background-size: 200%; 
+        filter: brightness(1.5) blur(5px); 
+        box-shadow: 0 0 40px rgba(76, 175, 80, 0.8); 
     }
     100% {
-        background-size: 150%; /* Zoom back in */
-        filter: brightness(1) blur(0px); /* Reset to normal brightness and remove blur */
-        box-shadow: 0 0 20px rgba(255, 77, 77, 0.8); /* Glowing effect with red color */
+        background-size: 200%;
+        filter: brightness(1) blur(0px); 
+        box-shadow: 0 0 20px rgba(255, 77, 77, 0.8); 
     }
 }
 h1{
