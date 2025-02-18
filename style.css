@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('pic1.jpg');
+    background-size: cover;
+    margin: 0;
+}
+body::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('pic1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.4;
+    z-index: -1;
+    animation: zoomGlowEffect 20s ease-in-out infinite;
+}
+
+@keyframes zoomGlowEffect {
+    0% {
+        background-size: 150%;
+        filter: brightness(1) blur(0px); /* Normal brightness and no blur */
+        box-shadow: 0 0 20px rgba(255, 77, 77, 0.8); /* Glowing effect with red color */
+    }
+    50% {
+        background-size: 100%; /* Zoom out to normal size */
+        filter: brightness(1.5) blur(5px); /* Increase brightness and add blur */
+        box-shadow: 0 0 40px rgba(76, 175, 80, 0.8); /* Glowing effect with green color */
+    }
+    100% {
+        background-size: 150%; /* Zoom back in */
+        filter: brightness(1) blur(0px); /* Reset to normal brightness and remove blur */
+        box-shadow: 0 0 20px rgba(255, 77, 77, 0.8); /* Glowing effect with red color */
+    }
+}
+h1{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    color: rgb(70, 69, 58);
+}
+.counter-container {
+    text-align: center;
+    background: rgba(189, 185, 190, 0.8);
+    padding: 50px;
+    border-radius: 80px;
+    box-shadow: 80px 10px 10px rgba(9, 6, 6, 0.759);
+}
+
+#counter {
+    font-size: 48px;
+    margin: 20px 0;
+    color: rgb(40, 33, 25);
+}
+
+.buttons button {
+    font-size: 16px;
+    margin: 5px;    
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:nth-child(1) { 
+    background-color: #430c49; color: white;
+}
+button:nth-child(1):hover {
+    box-shadow: 0 0 15px rgba(122, 11, 139, 0.8);
+}
+button:nth-child(2) { 
+    background-color:rgb(48, 77, 39); color: white; 
+}
+button:nth-child(2):hover {
+    box-shadow: 0 0 15px rgba(20, 95, 6, 0.8);
+}
+button:nth-child(3) { 
+    background-color:#430c49; color: white; 
+}
+button:nth-child(3):hover {
+    box-shadow: 0 0 15px rgba(122, 11, 139, 0.8);
+}
